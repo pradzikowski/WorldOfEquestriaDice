@@ -32,13 +32,18 @@ function rollDice() {
 
             var user1 = getStats(ponyUser[0]);
             var user2 = getStats(ponyOpponent[0]);
-            var rollUser1 = Math.floor((Math.random() * 6) + 1);
-            var rollUser2 = Math.floor((Math.random() * 6) + 1);
+            var rollUser1 = dice(6);
+            var rollUser2 = dice(6);
             var win = 0
+            var dmgroll1 = (dice(20)/10);
+            var dmgroll2 = (dice(20)/10);
+            
+            var dmg1 = (user1 * rollUser1)*dmgroll1;
+            var dmg2 = (user2 * rollUser2)*dmgroll2;
             console.log("Rzucono kośćmi");
-            if (user1 * rollUser1 > user2 * rollUser2)
+            if (dmg1 > dmg2)
                 win = 1;
-            if (user1 * rollUser1 < user2 * rollUser2)
+            if (dmg1 < dmg2)
                 win = 2;
             var message = "Losowanie pojedynku dla graczy: " + document.getElementById("diceUser").value + " i " + document.getElementById("diceOpponent").value + "\n\ Gracz pierwszy wylosował: " + rollUser1 + " a drugi: " + rollUser2 + "\n\ ";
             switch (win) {
@@ -52,13 +57,16 @@ function rollDice() {
                 default :
                     message += "Pojedynek zakończył się remisem";
             }
-
-
+            
+            message += "\n\ "+document.getElementById("diceUser").value + " zadał : "+dmg1+" ("+dmgroll1+ ") , a "+document.getElementById("diceOpponent").value + " zadał: "+dmg2+"("+dmgroll2+ ")";
+            console.log(message);
+            
+                    
             WoE.Chat.sendMessage(message);
             messagesHistory.push(messages);
 
 
-            console.log(message);
+            
             return false;
         })
     });
@@ -99,4 +107,8 @@ function getStats(pony) {
     }
     else
         return pony.data.skills.strength;
+}
+
+function dice(dx){
+    return Math.floor((Math.random() * dx) + 1)
 }
