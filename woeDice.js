@@ -38,8 +38,8 @@ function rollDice() {
                 requestMainStat(reqOpponent[0].data.id)
                 ).done(function(ponyUser, ponyOpponent) {
 
-            var user1 = getStats(ponyUser[0]);
-            var user2 = getStats(ponyOpponent[0]);
+            var user1 = getStats(ponyUser[0])/3;
+            var user2 = getStats(ponyOpponent[0])/3;
             var rollUser1 = dice(6);
             var rollUser2 = dice(6);
             var win = 0
@@ -53,7 +53,7 @@ function rollDice() {
                 win = 1;
             if (dmg1 < dmg2)
                 win = 2;
-            var message = "Losowanie pojedynku dla graczy: " + document.getElementById("diceUser").value + " i " + document.getElementById("diceOpponent").value + "\n\ Gracz pierwszy wylosował: " + rollUser1 + " a drugi: " + rollUser2 + "\n\ ";
+            var message = ">Losowanie pojedynku dla graczy: " + document.getElementById("diceUser").value + " i " + document.getElementById("diceOpponent").value + "\n\ Gracz pierwszy wylosował: " + rollUser1 + " a drugi: " + rollUser2 + "\n\ ";
             switch (win) {
                 case 1:
                     message += "Pojedynek zwyciężył: " + document.getElementById("diceUser").value;
