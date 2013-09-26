@@ -5,8 +5,8 @@
 // @author Chiredan&Vienes
 // ==/UserScript==
 document.getElementById("rp-chat").onLoad(buildGameDice);
-
-$("#box").ready(buildDice);
+document.getElementById("box").onLoad(buildDice);
+//$("#box").ready(buildDice);
 //Variables Block
 
 // Functions Block
