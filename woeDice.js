@@ -7,16 +7,16 @@
 
 
 $("#box").ready(buildDice);
-$("#rp").ready(buildGameDice);
+$("#rp-chat").ready(buildGameDice);
 //Variables Block
 
 // Functions Block
 
 function buildGameDice(){
     console.log("tworzenie kostki");
-    var html = '<input id="diceUser"/><input id="diceOpponent" value="tu wpisz nazwę gracza"/><button id="roll" onclick="rollGameDice()">losuj</button>';
+    var html = '<div id="dice"><input id="diceUser"/><input id="diceOpponent" value="tu wpisz nazwę gracza"/><button id="roll" onclick="rollGameDice()">losuj</button></div>';
     
-    $('textarea').get(0).before(html);
+    $('form').get(0).before(html);
 }
 
 function buildDice() {
