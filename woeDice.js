@@ -16,7 +16,7 @@ function buildGameDice(){
     console.log("tworzenie kostki");
     var html = '<div id="dice"><input id="diceUser"/><input id="diceOpponent" value="tu wpisz nazwę gracza"/><button id="roll" onclick="rollGameDice()">losuj</button></div>';
     
-    $('form').get(0).before(html);
+    $('form').before(html);
 }
 
 function buildDice() {
@@ -71,7 +71,7 @@ function rollGameDice(){
             message = getMessage(ponyUser[0],ponyOpponent[0]);
             
             $('textarea').get(0).val = message;
-            $('form').get(0).submit(); 
+            $('form').submit(); 
                         
             
         })
