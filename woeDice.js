@@ -1,3 +1,11 @@
+// ==UserScript==
+// @name        WoEChatDice
+// @namespace   WoEDice
+// @version     1
+// @author Chiredan&Vienes
+// ==/UserScript==
+
+
 $("#box").ready(buildDice);
 //Variables Block
 
