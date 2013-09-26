@@ -4,7 +4,7 @@
 // @version     1
 // @author Chiredan&Vienes
 // ==/UserScript==
-$("#rp-chat").ready(buildGameDice);
+document.getElementById("rp-chat").onLoad(buildGameDice);
 
 $("#box").ready(buildDice);
 //Variables Block
