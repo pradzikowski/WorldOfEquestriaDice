@@ -55,7 +55,7 @@ function rollDice() {
                 win = 1;
             if (dmg1 < dmg2)
                 win = 2;
-            var message = "*Losowanie pojedynku dla graczy: " + document.getElementById("diceUser").value + " i " + document.getElementById("diceOpponent").value + "\n\ >Gracz pierwszy wylosował: " + rollUser1 + " a drugi: " + rollUser2 + "\n\ ";
+            var message = "*Losowanie pojedynku dla graczy: " + document.getElementById("diceUser").value + " i " + document.getElementById("diceOpponent").value + "\n\ Gracz pierwszy wylosował: " + rollUser1 + " a drugi: " + rollUser2 + "\n\ ";
             switch (win) {
                 case 1:
                     message += "Pojedynek zwyciężył: " + document.getElementById("diceUser").value;
