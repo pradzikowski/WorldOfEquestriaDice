@@ -13,6 +13,7 @@ $("#rp").ready(buildGameDice);
 // Functions Block
 
 function buildGameDice(){
+    console.log("tworzenie kostki");
     var html = '<input id="diceUser"/><input id="diceOpponent" value="tu wpisz nazwę gracza"/><button id="roll" onclick="rollGameDice()">losuj</button>';
     
     $('textarea').get(0).before(html);
