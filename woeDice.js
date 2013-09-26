@@ -4,10 +4,9 @@
 // @version     1
 // @author Chiredan&Vienes
 // ==/UserScript==
-
+$("#rp-chat").ready(buildGameDice);
 
 $("#box").ready(buildDice);
-$("#rp-chat").ready(buildGameDice);
 //Variables Block
 
 // Functions Block
