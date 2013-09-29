@@ -2,12 +2,11 @@
 // @name        WoEChatDiceLoader
 // @namespace   WoEDiceLoader
 // @include     http://worldofequestria.pl/*
-// @version     1
+// @version     2
 // @updateURL https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/wodeDiceloader.js
 // @author Chiredan&Vienes
 // ==/UserScript==
 
-var $;
 
 // Add woeDiceScript
     (function(){
@@ -21,17 +20,4 @@ var $;
     
             GM_Head.insertBefore(GM_JQ, GM_Head.firstChild);
         }
-        GM_wait();
     })();
-
-// Check if woeDiceScript's loaded
-    function GM_wait() {
-        if (typeof unsafeWindow.woeDiceScript == 'undefined') {
-            window.setTimeout(GM_wait, 100);
-        } else {
-            $ = unsafeWindow.woeDiceScript.noConflict(true);
-            letsJQuery();
-        }
-    }
-
-// All your GM code must be inside this function
