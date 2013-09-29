@@ -2,7 +2,7 @@
 // @name        WoEChatDiceLoader
 // @namespace   WoEDiceLoader
 // @include     http://worldofequestria.pl/*
-// @version     4
+// @version     5
 // @downloadURL https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/wodeDiceloader.js
 // @updateURL https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/wodeDiceloader.js
 // @author Chiredan&Vienes
@@ -12,11 +12,8 @@
 var GM_Head = document.getElementsByTagName('head')[0] || document.documentElement;
 
 // Add woeDiceScript
-(function() {
-
     loadLibrary("woeDice");
 
-});
 
 
 // Simple woeLoaderFunctions
