@@ -2,29 +2,22 @@
 // @name        WoEChatDiceLoader
 // @namespace   WoEDiceLoader
 // @include     http://worldofequestria.pl/*
-// @version     2
-// @downloadURL https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/wodeDiceloader.js
+// @version     3
 // @updateURL https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/wodeDiceloader.js
 // @author Chiredan&Vienes
 // ==/UserScript==
 
-// var block
-var GM_Head = document.getElementsByTagName('head')[0] || document.documentElement;
 
 // Add woeDiceScript
     (function(){
-        loadLibrary("woeDice");
-            
-    });
-
-
-    function loadLibrary(libName){
-        var  GM_JQ = document.createElement('script');
+        if (typeof unsafeWindow.woeDiceScript == 'undefined') {
+            var GM_Head = document.getElementsByTagName('head')[0] || document.documentElement,
+                GM_JQ = document.createElement('script');
     
-            GM_JQ.src = 'https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/'+libName+'.js';
+            GM_JQ.src = 'https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/woeDice.js';
             GM_JQ.type = 'text/javascript';
             GM_JQ.async = true;
     
             GM_Head.insertBefore(GM_JQ, GM_Head.firstChild);
-    }
-// Simple woeLoaderFunctions
+        }
+    })();
