@@ -1,7 +1,10 @@
+// ==UserScript==
+// @name        WoEChatDiceLoader
 // @namespace   WoEDiceLoader
 // @include     http://worldofequestria.pl/*
 // @version     3a
 // @downloadURL https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/wodeDiceloader.js
+// @version     3
 // @updateURL https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/wodeDiceloader.js
 // @author Chiredan&Vienes
 // ==/UserScript==
