@@ -2,7 +2,6 @@
 // @include     http://worldofequestria.pl/*
 // @version     3a
 // @downloadURL https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/wodeDiceloader.js
-// @version     3a
 // @updateURL https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/wodeDiceloader.js
 // @author Chiredan&Vienes
 // ==/UserScript==
