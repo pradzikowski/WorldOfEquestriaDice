@@ -14,8 +14,6 @@ var GM_Head = document.getElementsByTagName('head')[0] || document.documentEleme
 // Add woeDiceScript
     loadLibrary("woeDice");
 
-
-
 // Simple woeLoaderFunctions
 
 function loadLibrary(libName) {
