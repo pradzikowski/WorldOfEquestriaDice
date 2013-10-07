@@ -23,7 +23,7 @@ function buildDiceDiv(user) {
     var userInput = '<input id="diceUser" value="' + user + '"/>';
     var opponentInput = '<input id="diceOpponent" placeholder="tu wpisz nazwę gracza"/>'
     var button = '<button id="roll" onclick="rollDice()">losuj</button>';
-    var button2 = '<button id="hug" onclick="clickUser()">przytul</button>';
+    var button2 = '<button id="hug" onclick="hugPony()">przytul</button>';
     $("#box").before('<div id="dice">' + text + text2 + userInput + opponentInput + button + button2 + '</div>');
 
 }
@@ -82,8 +82,8 @@ function rollDice() {
     });
 }
 
-function clickUser() {
-    var message = "/mme przytula czule " + document.getElementById("diceOpponent").value;
+function hugPony() {
+    var message = "/me przytula czule " + document.getElementById("diceOpponent").value;
     console.log(message);
 
     WoE.Chat.sendMessage(message);
