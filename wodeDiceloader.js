@@ -19,6 +19,7 @@ var GM_Head = document.getElementsByTagName('head')[0] || document.documentEleme
 // Simple woeLoaderFunctions
 
 function loadLibrary(libName) {
+    console.log("WoEDice start")
     var GM_JQ = document.createElement('script');
 
     GM_JQ.src = 'https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/' + libName + '.js';

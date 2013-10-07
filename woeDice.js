@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        WoEChatDice
 // @namespace   WoEDice
-// @version     1
+// @version     2
 // @author Chiredan&Vienes
 // ==/UserScript==
 
