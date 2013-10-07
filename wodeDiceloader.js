@@ -21,7 +21,6 @@ var GM_Head = document.getElementsByTagName('head')[0] || document.documentEleme
 function loadLibrary(libName) {
     var GM_JQ = document.createElement('script');
 
-    GM_JQ.src = 'https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/woeDice.js';
     GM_JQ.src = 'https://raw.github.com/chiredan/WorldOfEquestriaDice/MainBranch/' + libName + '.js';
     GM_JQ.type = 'text/javascript';
     GM_JQ.async = true;
