@@ -19,12 +19,13 @@ function buildDice() {
 
 function buildDiceDiv(user) {
     var text = "<p>Uwaga jest to wersja testowa ! Skrypt jest w trakcie przebudowy, prosze u ustawienie automatycznej aktualizacji w swoich wtyczkach !</p><br />";
-    var text2 = "<p> Wersja: Alpha2 : Skrypt walki wg. Vines'a, z poprawkami Sne, Skrytp tulenia. Następna aktualizacja: przebudowa i poprawa wyglądu skryptu</p><br />";
+    var text2 = "<p> Wersja: Alpha2 : Skrypt walki wg. Vienes'a, z poprawkami Sne, Skrytp tulenia. Następna aktualizacja: przebudowa i poprawa wyglądu skryptu</p><br />";
     var userInput = '<input id="diceUser" value="' + user + '"/>';
     var opponentInput = '<input id="diceOpponent" placeholder="tu wpisz nazwę gracza"/>'
     var button = '<button id="roll" onclick="rollDice()">losuj</button>';
-    var button2 = '<button id="hug" onclick="hugPony()">przytul</button>';
-    $("#box").before('<div id="dice">' + text + text2 + userInput + opponentInput + button + button2 + '</div>');
+    var button2 = '<button id="hug" onclick="hugPony()">przytul(/me)</button>';
+    var button3 = '<button id="hug" onclick="hugPerson()">przytul (/mme)</button>';
+    $("#box").before('<div id="dice">' + text + text2 + userInput + opponentInput + button + button2 +button3+ '</div>');
 
 }
 
@@ -82,8 +83,16 @@ function rollDice() {
     });
 }
 
-function hugPony() {
-    var message = "/me przytula czule " + document.getElementById("diceOpponent").value;
+function hugPerson(){
+    hug("/mme");
+}
+
+function hugPony(){
+    hug("/me");
+}
+
+function hug(string) {
+    var message = string+" przytula czule " + document.getElementById("diceOpponent").value;
     console.log(message);
 
     WoE.Chat.sendMessage(message);
